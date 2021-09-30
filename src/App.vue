@@ -1,28 +1,77 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="wrapper">
+      <Header/>
+      
+      <main>
+        <!-- START JUMBO ---------------------------------------------->
+        <section id="jumbo">
+
+        </section>
+        <!-- END JUMBO ------------------------------------------------>
+
+        <!-- START MEET-THE-AUTHOR ------------------------------------>
+        <section id="meet-the-author">
+
+        </section>
+        <!-- END MEET-THE-AUTHOR -------------------------------------->
+
+        <!-- START STORE ---------------------------------------------->
+        <section id="store">
+          
+        </section>
+        <!-- END STORE ------------------------------------------------>
+
+        <!-- START WHAT-THE-CRITICS ----------------------------------->
+        <section id="what-the-critics">
+          
+        </section>
+        <!-- END WHAT-THE-CRITICS ------------------------------------->
+
+        <!-- START EVENTS --------------------------------------------->
+        <section id="events">
+          
+        </section>
+        <!-- END EVENTS ----------------------------------------------->
+
+        <!-- START NEWSLETTER ----------------------------------------->
+        <section id="newsletter">
+          
+        </section>
+        <!-- END NEWSLETTER ------------------------------------------->
+
+        <!-- START MORE-ABOUT-AUTHOR ---------------------------------->
+        <section id="more-about-author">
+          
+        </section>
+        <!-- END MORE-ABOUT-AUTHOR ------------------------------------>
+
+        <!-- START BLOG ----------------------------------------------->
+        <section id="blog">
+          
+        </section>
+        <!-- END BLOG ------------------------------------------------->
+      </main>
+
+      <Footer/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './styles/general.scss';
+  @import './styles/vars.scss';
 </style>
