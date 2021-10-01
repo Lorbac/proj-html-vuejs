@@ -5,10 +5,8 @@
     </div>
     <div class="nav-bar">
       <ul>
-        <li v-for="(link, index) in links" :key="index">
-          <a :href="link.url">
-            {{ link.text }}
-          </a>
+        <li :class="(link.current) ? 'active' : 'null'" v-for="(link, index) in links" :key="index">
+          <a :class="(link.current) ? 'active' : 'null'" v-html="link.text" :href="link.url"></a>
         </li>
       </ul>
     </div>
@@ -24,7 +22,7 @@ export default {
         {
           text: "Home",
           url: "#",
-          current: false
+          current: true
         },
         {
           text: "About Me",
@@ -57,7 +55,7 @@ export default {
           current: false
         },
         {
-          text: "Cart",
+          text: "<i class='fas fa-shopping-cart'></i>",
           url: "#",
           current: false
         },
@@ -104,20 +102,22 @@ export default {
           padding-top: 50px;
           margin-left: 50px;
 
-          &:hover {
-            border-top: 5px solid $saffron;
+          &:hover,
+          &.active {
+            border-top: 5px solid $anzac;
             padding-top: 45px;
-            transition-duration: 500ms;
-          }
-
-          &:hover a {
-            color: $saffron;
-            transition-duration: 500ms;
+            transition-duration: 100ms;
           }
 
           a {
             text-decoration: none;
             color: $white;
+
+            &:hover,
+            &.active {
+              color: $anzac;
+              transition-duration: 100ms;
+            }
           }
         }
       }
