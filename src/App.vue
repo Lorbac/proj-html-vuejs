@@ -38,13 +38,26 @@
 
         <!-- START MEET-THE-AUTHOR ------------------------------------>
         <section id="meet-the-author">
-
+          <h2>More About Damon Vaughn</h2>
+          <p>Damon Vaughn is a professor of psychology at the University of Toronto, a clinical psychologist and the author of the multi-million copy bestseller “The story of my life.”</p>
+          <button>Meet The Author</button>
         </section>
         <!-- END MEET-THE-AUTHOR -------------------------------------->
 
         <!-- START STORE ---------------------------------------------->
         <section id="store">
-          
+          <div class="e-commerce">
+            <img v-for="(img, i) in eCommerceList" :key="i" :src="require(`./${img.image}`)" alt="">
+          </div>
+          <div class="latest-release">
+            <img src="./assets/images/audible-app-2x-400x418.png" alt="AudibleApp">
+            <div class="new-audiobook">
+              <h3>New Audiobook</h3>
+              <p>NO TIME TO READ? NO PROBLEM. LISTEN TO IT</p>
+              <p>Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.</p>
+              <img v-for="(img, i) in eCommerceColoredList" :key="i" :src="require(`./${img.colorImage}`)" alt="">
+            </div>
+          </div>
         </section>
         <!-- END STORE ------------------------------------------------>
 
@@ -93,6 +106,42 @@ export default {
   components: {
     Header,
     Footer
+  },
+  data() {
+    return {
+      eCommerceList: [
+        {
+          name: "ebay",
+          image: "assets/images/ebay-logotan-2x-200x66.png"
+        },
+        {
+          name: "audible",
+          image: "assets/images/audible-logotan-2x-200x66.png"
+        },
+        {
+          name: "barnes-noble",
+          image: "assets/images/bb-logotan-2x-200x66.png"
+        },
+        {
+          name: "kindle-fire",
+          image: "assets/images/kindlefire-logotan-2x-200x66.png"
+        }
+      ],
+      eCommerceColoredList: [
+        {
+          name: "audible",
+          colorImage: "assets/images/audible-logo.png"
+        },
+        {
+          name: "barnes-noble",
+          colorImage: "assets/images/bn-logo-tall.png"
+        },
+        {
+          name: "kindle-fire",
+          colorImage: "assets/images/kindle-logo-tall.png"
+        }
+      ]
+    }
   }
 }
 </script>
@@ -103,10 +152,9 @@ export default {
   @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 
   .wrapper {
-
+    
     main {
-      position: relative;
-
+      
       .sticky-top-button, .sticky-bottom-button {
         width: 65px;
         height: 65px;
@@ -132,13 +180,13 @@ export default {
       }
 
       .sticky-top-button {
-        right: 30px;
-        top: 200px;
+        right: 20px;
+        top: 150px;
       }
 
       .sticky-bottom-button {
-        right: 30px;
-        top: 275px;
+        right: 20px;
+        top: 225px;
 
         .dollar {
           position: absolute;
@@ -156,7 +204,6 @@ export default {
       #jumbo {
         display: flex;
         justify-content: flex-end;
-        position: relative;
         min-height: 100vh;
         background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%), URL("./assets/images/hero-07-2x.jpg");
         background-repeat: no-repeat;
@@ -254,6 +301,11 @@ export default {
               border: 1px solid $fountainBlue;
               box-shadow: 0px 0px 14px -5px #51bfc7;
               background-color: $white;
+
+              &:hover {
+                transition: 0.2 linear;
+                box-shadow: 0px 0px 20px -1px #51bfc7;
+              }
             }
 
             .buy-amazon {
@@ -271,7 +323,100 @@ export default {
       }
 
       #meet-the-author {
-        
+        width: 70%;
+        text-align: center;
+        margin: 100px auto;
+
+        h2 {
+          font-family: "Kristi";
+          color: $saffron;
+          font-weight: lighter;
+          font-size: 80px;
+        }
+
+        p {
+          margin-top: 10px;
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+        button {
+          margin-top: 50px;
+          background-color: $keppel;
+          border: none;
+          padding: 12px 35px;
+          color: $white;
+          border-radius: 5px;
+          font-size: 18px;
+          cursor: pointer;
+          transition: 0.5s ease-out;
+
+          &:hover {
+            transition: 0.2s linear;
+            background-color: $blueLagoon;
+          }
+        }
+      }
+
+      #store {
+
+        .e-commerce {
+          background-color: $dawnPink;
+          display: flex;
+          justify-content: center;
+          padding: 70px 0;
+
+          img {
+            padding: 0 30px;
+            cursor: pointer;
+          }
+        }
+
+        .latest-release {
+          background-image: url("./assets/images/banner.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          
+
+          img {
+            align-self: flex-end;
+            margin-top: 50px;
+          }
+
+          .new-audiobook {
+            width: 40%;
+            align-self: center;
+            text-align: center;
+
+            h3 {
+              color: $white;
+              font-family: none;
+              font-size: 40px;
+              margin: 10px 0;
+            }
+
+            p:nth-child(2) {
+              color: $saffron;
+              font-size: 20px;
+              margin: 15px 0;
+            }
+
+            p:nth-child(3) {
+              width: 70%;
+              color: $osloGray;
+              font-size: 20px;
+              line-height: 30px;
+              margin: 10px auto 0 auto;
+            }
+
+            img {
+              padding: 0 30px;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }
