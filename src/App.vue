@@ -15,11 +15,7 @@
 
         <WhatTheCritics/>
 
-        <!-- START EVENTS --------------------------------------------->
-        <section id="events">
-          
-        </section>
-        <!-- END EVENTS ----------------------------------------------->
+        <Events/>
 
         <!-- START NEWSLETTER ----------------------------------------->
         <section id="newsletter">
@@ -52,6 +48,7 @@ import Jumbo from './components/Jumbo.vue';
 import MeetTheAuthor from './components/MeetTheAuthor.vue';
 import Store from './components/Store.vue';
 import WhatTheCritics from './components/WhatTheCritics.vue';
+import Events from './components/Events.vue'
 import Footer from './components/Footer.vue';
 
 export default {
@@ -63,6 +60,7 @@ export default {
     MeetTheAuthor,
     Store,
     WhatTheCritics,
+    Events,
     Footer,
   },
 }

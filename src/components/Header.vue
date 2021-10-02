@@ -109,15 +109,16 @@ export default {
             transition-duration: 100ms;
           }
 
+          &:hover a,
+          &.active a {
+            color: $anzac;
+            transition-duration: 100ms;
+          }
+
           a {
             text-decoration: none;
             color: $white;
 
-            &:hover,
-            &.active {
-              color: $anzac;
-              transition-duration: 100ms;
-            }
           }
         }
       }

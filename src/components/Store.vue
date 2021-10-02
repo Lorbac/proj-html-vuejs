@@ -4,7 +4,7 @@
           <img v-for="(img, i) in eCommerceList" :key="i" :src="require(`../${img.image}`)" alt="">
         </div>
         <div class="latest-release">
-          <img src="../assets/images/audible-app-2x-400x418.png" alt="AudibleApp">
+          <img src="../assets/images/audible-app-2x-600x628.png" alt="AudibleApp">
           <div class="new-audiobook">
             <h3>New Audiobook</h3>
             <p>NO TIME TO READ? NO PROBLEM. LISTEN TO IT</p>
