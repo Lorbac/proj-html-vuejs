@@ -17,11 +17,7 @@
 
         <Events/>
 
-        <!-- START NEWSLETTER ----------------------------------------->
-        <section id="newsletter">
-          
-        </section>
-        <!-- END NEWSLETTER ------------------------------------------->
+        <Newsletter/>
 
         <!-- START MORE-ABOUT-AUTHOR ---------------------------------->
         <section id="more-about-author">
@@ -48,7 +44,8 @@ import Jumbo from './components/Jumbo.vue';
 import MeetTheAuthor from './components/MeetTheAuthor.vue';
 import Store from './components/Store.vue';
 import WhatTheCritics from './components/WhatTheCritics.vue';
-import Events from './components/Events.vue'
+import Events from './components/Events.vue';
+import Newsletter from './components/Newsletter.vue';
 import Footer from './components/Footer.vue';
 
 export default {
@@ -61,6 +58,7 @@ export default {
     Store,
     WhatTheCritics,
     Events,
+    Newsletter,
     Footer,
   },
 }
