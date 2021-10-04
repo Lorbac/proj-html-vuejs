@@ -89,7 +89,7 @@ export default {
             display: flex;
             justify-content: space-between;
             width: 70%;
-            margin: 10px auto;
+            margin: 0px auto;
             padding-bottom: 100px;
 
             .left-side-articles {
