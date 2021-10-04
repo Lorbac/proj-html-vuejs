@@ -57,7 +57,8 @@ export default {
 
       p:nth-child(2) {
         color: $white;
-        font-size: 48px;
+        font-size: 50px;
+        font-family: none;
         line-height: 1.4;
       }
 

@@ -5,6 +5,7 @@
       <Header/>
       
       <main>
+
         <FixedButtons/>
 
         <Jumbo/>
@@ -19,17 +20,10 @@
 
         <Newsletter/>
 
-        <!-- START MORE-ABOUT-AUTHOR ---------------------------------->
-        <section id="more-about-author">
-          
-        </section>
-        <!-- END MORE-ABOUT-AUTHOR ------------------------------------>
+        <MoreAboutTheAuthor/>
 
-        <!-- START BLOG ----------------------------------------------->
-        <section id="blog">
-          
-        </section>
-        <!-- END BLOG ------------------------------------------------->
+        <Blog/>
+
       </main>
 
       <Footer/>
@@ -46,6 +40,8 @@ import Store from './components/Store.vue';
 import WhatTheCritics from './components/WhatTheCritics.vue';
 import Events from './components/Events.vue';
 import Newsletter from './components/Newsletter.vue';
+import MoreAboutTheAuthor from './components/MoreAboutAuthor.vue';
+import Blog from './components/Blog.vue'
 import Footer from './components/Footer.vue';
 
 export default {
@@ -59,6 +55,8 @@ export default {
     WhatTheCritics,
     Events,
     Newsletter,
+    MoreAboutTheAuthor,
+    Blog,
     Footer,
   },
 }
